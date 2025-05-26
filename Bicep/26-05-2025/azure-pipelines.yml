@@ -12,6 +12,6 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az group create --name testing --location centralus
-      az deployment group create --resource-group testing --template-file ./bicep/26-05-2025/env_module/main.bicep --parameters ./bicep/26-05-2025/env_module/main.bicepparam
+      az deployment group create --resource-group testing --template-file ./azure/Bicep/26-05-2025/env_module/main.bicep --parameters ./azure/Bicep/26-05-2025/env_module/main.bicepparam
       # az group delete --name testing --yes --no-wait 
     displayName: 'Deploy Bicep Template'

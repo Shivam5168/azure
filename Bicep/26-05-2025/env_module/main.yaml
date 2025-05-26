@@ -13,6 +13,6 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az group create --name testing --location centralus 
-      az deployment group create --resource-group testing --template-file main.bicep --parameters main.bicepparam
+      az deployment group create --resource-group testing --template-file main.bicep --parameters @main.bicepparam
       # az group delete --name testing --yes --no-wait 
     

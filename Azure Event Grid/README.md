@@ -90,6 +90,8 @@ Azure Event Grid events use a consistent schema based on the CloudEvents specifi
 - **Built-in Reliability:** Retry policies and dead-letter queues.
 - **Integration:** Works with Azure services like Azure Functions, Logic Apps, and custom endpoints.
 
+![Benifits of Azure Event Grid](./images/benifits.png)
+
 
 ## Example Use Case
 

@@ -1,0 +1,19 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    displayName: 'Deploy Bicep Template'
+    azureSubscription: 'Azure Resource Manager'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az group create --name testing --location centralus 
+      cd bicep/26-05-2025/env_module
+      az deployment group create --resource-group testing --template-file main.bicep --parameters main.bicepparam
+      # az group delete --name testing --yes --no-wait 
+    

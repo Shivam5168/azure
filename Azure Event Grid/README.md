@@ -1,4 +1,4 @@
-#QUESTIONS :
+# QUESTIONS :
 
 ## What Is Azure Event Grid?
 

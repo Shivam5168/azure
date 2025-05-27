@@ -32,5 +32,4 @@ This repository is intended to document my continuous learning, experiments, and
 
 ---
 
-## 📂 Repository Structure
 

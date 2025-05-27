@@ -31,8 +31,8 @@ A **Topic** in Azure Event Grid is a user-defined endpoint where event publisher
 ### 🔵 Types of Topics in Azure Event Grid
 
 Azure Event Grid supports two main types of topics:
-- ***1. System Topics***
-- ***2. Custom Topics***
+ ***1. System Topics***
+ ***2. Custom Topics***
 
 #### 1. **System Topics**
 

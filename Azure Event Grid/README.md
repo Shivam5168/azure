@@ -26,6 +26,44 @@ A **Topic** in Azure Event Grid is a user-defined endpoint where event publisher
 
 ![Azure Event Grid Topics](./images/Azure-Event-Grid-Topics.png)
 
+---
+
+### 🔵 Types of Topics in Azure Event Grid
+
+Azure Event Grid supports two main types of topics:
+- ***1. System Topics***
+- ***2. Custom Topics***
+
+#### 1. **System Topics**
+
+- **Definition:** Automatically created and managed by Azure when you enable Event Grid on supported Azure services.
+- **Use Case:** Ideal when subscribing to events from Azure services like **Storage Accounts**, **Resource Groups**, **Event Hubs**, etc.
+- **Example Services:**
+  - Azure Blob Storage
+  - Azure Media Services
+  - Azure IoT Hub
+  - Azure Key Vault
+- **Key Point:** You don’t create or manage them — Azure handles it for you.
+
+> 💡 Use System Topics when you want to listen to events from built-in Azure services.
+
+#### 2. **Custom Topics**
+
+- **Definition:** User-created topics that allow **custom applications or services** to publish events.
+- **Use Case:** Useful for integrating **custom apps**, **external services**, or microservices into your event-driven architecture.
+- **Flexibility:** You define what events to publish and how they’re structured.
+- **Supports:** Multiple event handlers/subscribers.
+
+> 💡 Use Custom Topics when you need to emit events from your own applications or systems.
+
+#### Summary Table
+
+| Topic Type     | Created By | Used For                     | Example                      |
+|----------------|------------|------------------------------|------------------------------|
+| System Topic   | Azure      | Azure services               | Blob storage file uploaded   |
+| Custom Topic   | User       | Custom apps and services     | Your app emits a payment event |
+
+---
 
 ### Event Subscription
 
@@ -57,7 +95,7 @@ Azure Event Grid events use a consistent schema based on the CloudEvents specifi
 
 1. An application uploads a file to Azure Blob Storage.
 2. Blob Storage publishes an event to Event Grid Topic.
-3. Event Grid routes the event to an Azure Function that processes the file.f
+3. Event Grid routes the event to an Azure Function that processes the file.
 
 ![Diagram for USE CASE](./images/Use-Case.png)
 
